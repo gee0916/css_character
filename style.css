@@ -1,0 +1,141 @@
+.pot {
+  font-size: 10px; /* 크키 조절 */
+  background-color: skyblue;
+  width: 24em;
+  height: 33em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 화면 정중앙 위치 */
+}
+
+/* 접근성 고려 */
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.pot::before,
+.pot::after {
+  content: "";
+  background-color: red;
+  display: block; /* inline 속성 block으로 바꿔주기 */
+  width: 1em;
+  height: 1em;
+  margin: -1em 0 0 -1em; /* (0,0) 좌표로 만들어주기 */
+}
+
+.pot::before {
+  box-shadow: 3em 22em #eca25a, 4em 22em #eca25a, 5em 22em #eca25a,
+    6em 22em #eca25a, 7em 22em #fcdab3, 8em 22em #eca25a, 9em 22em #d48130,
+    10em 22em #924905, 11em 22em #924905, 12em 22em #6b3100, 13em 22em #6b3100,
+    14em 22em #6b3100, 15em 22em #6b3100, 16em 22em #6b3100, 17em 22em #6b3100,
+    3em 23em #eca25a, 4em 23em #eca25a, 5em 23em #eca25a, 6em 23em #eca25a,
+    7em 23em #fcdab3, 8em 23em #eca25a, 9em 23em #d18035, 10em 23em #d18035,
+    11em 23em #d18035, 12em 23em #924a02, 13em 23em #924a02, 14em 23em #924a02,
+    15em 23em #924a02, 16em 23em #924a02, 17em 23em #6b3100, 3em 24em #934a03,
+    4em 24em #934a03, 5em 24em #934a03, 6em 24em #934a03, 7em 24em #934a03,
+    8em 24em #934a03, 9em 24em #683201, 10em 24em #683201, 11em 24em #683201,
+    12em 24em #683201, 13em 24em #683201, 14em 24em #683201, 15em 24em #683201,
+    16em 24em #683201, 17em 24em #683201, 4em 25em #693102, 5em 25em #924a02,
+    6em 25em #924a02, 7em 25em #924a02, 8em 25em #924a02, 9em 25em #924a02,
+    10em 25em #924a02, 11em 25em #924a02, 12em 25em #924a02, 13em 25em #924a02,
+    14em 25em #924a02, 15em 25em #924a02, 16em 25em #693102, 4em 26em #693102,
+    5em 26em #924a02, 6em 26em #924a02, 7em 26em #924a02, 8em 26em #924a02,
+    9em 26em #924a02, 10em 26em #924a02, 11em 26em #924a02, 12em 26em #924a02,
+    13em 26em #924a02, 14em 26em #924a02, 15em 26em #924a02, 16em 26em #693102,
+    4em 27em #994d08, 5em 27em #d78533, 6em 27em #d78533, 7em 27em #fcdab3,
+    8em 27em #eba75e, 9em 27em #d78533, 10em 27em #d78533, 11em 27em #d78533,
+    12em 27em #924a02, 13em 27em #924a02, 14em 27em #924a02, 15em 27em #994d08,
+    16em 27em #693102, 5em 28em #924c06, 6em 28em #d78533, 7em 28em #fcdab3,
+    8em 28em #eba75e, 9em 28em #d78533, 10em 28em #d78533, 11em 28em #d78533,
+    12em 28em #924a02, 13em 28em #924a02, 14em 28em #924a02, 15em 28em #693504,
+    5em 29em #924c06, 6em 29em #d78533, 7em 29em #fcdab3, 8em 29em #eba75e,
+    9em 29em #d78533, 10em 29em #d78533, 11em 29em #d78533, 12em 29em #924a02,
+    13em 29em #924a02, 14em 29em #924a02, 15em 29em #693504, 5em 30em #924c06,
+    6em 30em #d78533, 7em 30em #eba75e, 8em 30em #eba75e, 9em 30em #d78533,
+    10em 30em #d78533, 11em 30em #d78533, 12em 30em #924a02, 13em 30em #924a02,
+    14em 30em #924a02, 15em 30em #693504, 6em 31em #914903, 7em 31em #d78233,
+    8em 31em #d78233, 9em 31em #693201, 10em 31em #693201, 11em 31em #693201,
+    12em 31em #693201, 13em 31em #693201, 14em 31em #693201;
+}
+
+.pot::after {
+  animation: day1 3s steps(1) 2 forwards, day2 3s 6.1s steps(1) 2 forwards;
+}
+
+@keyframes day1 {
+  0% {
+    box-shadow: 6em 26em #000, 9em 26em #000, 6em 27em #000, 9em 27em #000,
+      7em 28em #000, 8em 28em #000, 11em 26em #000, 14em 26em #000,
+      11em 27em #000, 14em 27em #000, 12em 28em #000, 13em 28em #000,
+      9em 30em #000, 10em 30em #000, 11em 30em #000;
+  }
+
+  25% {
+    box-shadow: 6em 26em #000, 9em 26em #000, 6em 27em #000, 9em 27em #000,
+      7em 28em #000, 8em 28em #000, 11em 26em #000, 14em 26em #000,
+      11em 27em #000, 14em 27em #000, 12em 28em #000, 13em 28em #000,
+      10em 30em #000, 18em 28em #000, 19em 28em #000, 20em 28em #000,
+      21em 28em #000, 20em 29em #000, 19em 30em #000, 18em 31em #000,
+      19em 31em #000, 20em 31em #000, 21em 31em #000;
+  }
+
+  50% {
+    box-shadow: 6em 26em #000, 9em 26em #000, 6em 27em #000, 9em 27em #000,
+      7em 28em #000, 8em 28em #000, 11em 26em #000, 14em 26em #000,
+      11em 27em #000, 14em 27em #000, 12em 28em #000, 13em 28em #000,
+      9em 30em #000, 10em 30em #000, 11em 30em #000, 18em 28em #000,
+      19em 28em #000, 20em 28em #000, 21em 28em #000, 20em 29em #000,
+      19em 30em #000, 18em 31em #000, 19em 31em #000, 20em 31em #000,
+      21em 31em #000;
+  }
+
+  75% {
+    box-shadow: 6em 26em #000, 9em 26em #000, 6em 27em #000, 9em 27em #000,
+      7em 28em #000, 8em 28em #000, 11em 26em #000, 14em 26em #000,
+      11em 27em #000, 14em 27em #000, 12em 28em #000, 13em 28em #000,
+      10em 30em #000, 18em 28em #000, 19em 28em #000, 20em 28em #000,
+      21em 28em #000, 20em 29em #000, 19em 30em #000, 18em 31em #000,
+      19em 31em #000, 20em 31em #000, 21em 31em #000, 20em 22em #000,
+      21em 22em #000, 22em 22em #000, 23em 22em #000, 22em 23em #000,
+      21em 24em #000, 20em 25em #000, 21em 25em #000, 22em 25em #000,
+      23em 25em #000;
+  }
+
+  100% {
+    box-shadow: 6em 26em #000, 9em 26em #000, 6em 27em #000, 9em 27em #000,
+      7em 28em #000, 8em 28em #000, 11em 26em #000, 14em 26em #000,
+      11em 27em #000, 14em 27em #000, 12em 28em #000, 13em 28em #000,
+      9em 30em #000, 10em 30em #000, 11em 30em #000, 18em 28em #000,
+      19em 28em #000, 20em 28em #000, 21em 28em #000, 20em 29em #000,
+      19em 30em #000, 18em 31em #000, 19em 31em #000, 20em 31em #000,
+      21em 31em #000, 20em 22em #000, 21em 22em #000, 22em 22em #000,
+      23em 22em #000, 22em 23em #000, 21em 24em #000, 20em 25em #000,
+      21em 25em #000, 22em 25em #000, 23em 25em #000;
+  }
+}
+
+@keyframes day2 {
+  0%,
+  100% {
+    box-shadow: 6em 26em #000, 7em 26em #000, 8em 26em #000, 7em 27em #000,
+      8em 27em #000, 9em 26em #000, 7em 28em #000, 8em 28em #000, 11em 26em #000,
+      12em 26em #000, 13em 26em #000, 14em 26em #000, 12em 27em #000,
+      13em 27em #000, 12em 28em #000, 13em 28em #000, 9em 30em #000,
+      10em 30em #000, 11em 30em #000;
+  }
+
+  50% {
+    box-shadow: 6em 26em #000, 9em 26em #000, 6em 27em #000, 9em 27em #000,
+      7em 28em #000, 8em 28em #000, 11em 26em #000, 14em 26em #000,
+      11em 27em #000, 14em 27em #000, 12em 28em #000, 13em 28em #000,
+      9em 30em #000, 10em 30em #000, 11em 30em #000;
+  }
+}
