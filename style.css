@@ -1,6 +1,6 @@
 .pot {
   font-size: 12px; /* 크키 조절 */
-  background-color: skyblue;
+  background-color: orange;
   width: 24em;
   height: 33em;
   position: absolute;
@@ -24,7 +24,7 @@
 .pot::before,
 .pot::after {
   content: "";
-  background-color: red;
+  /* background-color: red; */
   display: block; /* inline 속성 block으로 바꿔주기 */
   width: 1em;
   height: 1em;
@@ -67,7 +67,8 @@
 }
 
 .pot::after {
-  animation: day1 3s steps(1) 2 forwards, day2 3s 6.1s steps(1) forwards;
+  animation: day1 3s steps(1) 2 forwards, day2 3s 6.1s steps(1) forwards,
+    day3 3s 9.5s steps(1) forwards;
 }
 
 @keyframes day1 {
@@ -128,15 +129,15 @@
       8em 27em #000, 9em 26em #000, 7em 28em #000, 8em 28em #000, 11em 26em #000,
       12em 26em #000, 13em 26em #000, 14em 26em #000, 12em 27em #000,
       13em 27em #000, 12em 28em #000, 13em 28em #000, 9em 30em #000,
-      10em 30em #000, 11em 30em #000, 20em 29em #000, 10em 21em #379717;
+      10em 30em #000, 11em 30em #000, 20em 29em #89ddff, 10em 21em #379717;
   }
 
   20% {
     box-shadow: 6em 26em #000, 9em 26em #000, 6em 27em #000, 9em 27em #000,
       7em 28em #000, 8em 28em #000, 11em 26em #000, 14em 26em #000,
       11em 27em #000, 14em 27em #000, 12em 28em #000, 13em 28em #000,
-      9em 30em #000, 10em 30em #000, 11em 30em #000, 20em 29em #000,
-      21em 24em #000, 10em 21em #379717, 10em 20em #2fbd00;
+      9em 30em #000, 10em 30em #000, 11em 30em #000, 20em 29em #89ddff,
+      21em 24em #89ddff, 10em 21em #379717, 10em 20em #2fbd00;
   }
 
   40% {
@@ -144,8 +145,8 @@
       8em 27em #000, 9em 26em #000, 7em 28em #000, 8em 28em #000, 11em 26em #000,
       12em 26em #000, 13em 26em #000, 14em 26em #000, 12em 27em #000,
       13em 27em #000, 12em 28em #000, 13em 28em #000, 9em 30em #000,
-      10em 30em #000, 11em 30em #000, 20em 28em #000, 20em 30em #000,
-      19em 29em #000, 21em 29em #000, 21em 24em #000, 10em 21em #379717,
+      10em 30em #000, 11em 30em #000, 20em 28em #89ddff, 20em 30em #89ddff,
+      19em 29em #89ddff, 21em 29em #89ddff, 21em 24em #89ddff, 10em 21em #379717,
       10em 20em #379717, 10em 19em #2fbd00;
   }
 
@@ -153,20 +154,76 @@
     box-shadow: 6em 26em #000, 9em 26em #000, 6em 27em #000, 9em 27em #000,
       7em 28em #000, 8em 28em #000, 11em 26em #000, 14em 26em #000,
       11em 27em #000, 14em 27em #000, 12em 28em #000, 13em 28em #000,
-      9em 30em #000, 10em 30em #000, 11em 30em #000, 20em 29em #000,
-      21em 23em #000, 21em 25em #000, 20em 24em #000, 22em 24em #000,
+      9em 30em #000, 10em 30em #000, 11em 30em #000, 20em 29em #89ddff,
+      21em 23em #89ddff, 21em 25em #89ddff, 20em 24em #89ddff, 22em 24em #89ddff,
       10em 21em #207e01, 10em 20em #207e01, 10em 19em #379717, 10em 18em #2fbd00,
       8em 19em #2fbd00, 9em 19em #2fbd00;
   }
 
-  80%,
-  100% {
+  80% {
     box-shadow: 6em 26em #000, 7em 26em #000, 8em 26em #000, 7em 27em #000,
       8em 27em #000, 9em 26em #000, 7em 28em #000, 8em 28em #000, 11em 26em #000,
       12em 26em #000, 13em 26em #000, 14em 26em #000, 12em 27em #000,
       13em 27em #000, 12em 28em #000, 13em 28em #000, 9em 30em #000,
-      10em 30em #000, 11em 30em #000, 20em 29em #000, 21em 24em #000,
-      10em 21em #207e01, 10em 20em #207e01, 10em 19em #379717, 10em 18em #2fbd00,
-      8em 19em #2fbd00, 9em 19em #2fbd00;
+      10em 30em #000, 11em 30em #000, 20em 29em #89ddff, 21em 24em #89ddff,
+      10em 21em #207e01, 10em 20em #207e01, 10em 19em #379717, 10em 18em #379717,
+      10em 17em #2fbd00, 7em 18em #379717, 8em 18em #379717, 9em 18em #379717,
+      8em 19em #2fbd00, 9em 19em #2fbd00, 11em 20em #2fbd00;
+  }
+
+  100% {
+    box-shadow: 6em 26em #000, 9em 26em #000, 6em 27em #000, 9em 27em #000,
+      7em 28em #000, 8em 28em #000, 11em 26em #000, 14em 26em #000,
+      11em 27em #000, 14em 27em #000, 12em 28em #000, 13em 28em #000,
+      9em 30em #000, 10em 30em #000, 11em 30em #000, 20em 28em #89ddff,
+      20em 30em #89ddff, 19em 29em #89ddff, 21em 29em #89ddff, 21em 23em #89ddff,
+      21em 25em #89ddff, 20em 24em #89ddff, 22em 24em #89ddff, 10em 21em #207e01,
+      10em 20em #207e01, 10em 19em #207e01, 10em 18em #207e01, 10em 17em #379717,
+      10em 16em #2fbd00, 5em 17em #2fbd00, 6em 17em #2fbd00, 7em 17em #2fbd00,
+      8em 17em #379717, 9em 17em #379717, 7em 18em #379717, 8em 18em #379717,
+      9em 18em #207e01, 8em 19em #379717, 9em 19em #379717, 11em 19em #207e01,
+      12em 19em #207e01, 13em 19em #2fbd00, 11em 20em #207e01;
+  }
+}
+
+@keyframes day3 {
+  0% {
+    box-shadow: 7em 26em #fff, 8em 26em #000, 7em 27em #000, 8em 27em #000,
+      7em 28em #000, 8em 28em #000, 12em 26em #fff, 13em 26em #000,
+      12em 27em #000, 13em 27em #000, 12em 28em #000, 13em 28em #000,
+      9em 30em #000, 10em 30em #000, 11em 30em #000, 10em 21em #207e01,
+      10em 20em #207e01, 10em 19em #207e01, 10em 18em #207e01, 10em 17em #379717,
+      10em 16em #2fbd00, 10em 15em #2fbd00, 10em 14em #2fbd00, 5em 17em #2fbd00,
+      6em 17em #2fbd00, 7em 17em #2fbd00, 8em 17em #379717, 9em 17em #379717,
+      7em 18em #379717, 8em 18em #379717, 9em 18em #207e01, 8em 19em #379717,
+      9em 19em #379717, 11em 19em #207e01, 12em 19em #207e01, 13em 19em #2fbd00,
+      11em 20em #207e01;
+  }
+
+  15% {
+    box-shadow: 7em 26em #fff, 8em 26em #000, 7em 27em #000, 8em 27em #000,
+      7em 28em #000, 8em 28em #000, 12em 26em #fff, 13em 26em #000,
+      12em 27em #000, 13em 27em #000, 12em 28em #000, 13em 28em #000,
+      10em 30em #000, 10em 21em #207e01, 10em 20em #207e01, 10em 19em #207e01,
+      10em 18em #207e01, 10em 17em #207e01, 10em 16em #379717, 10em 15em #379717,
+      10em 14em #2fbd00, 10em 13em #2fbd00, 5em 17em #2fbd00, 6em 17em #2fbd00,
+      7em 17em #2fbd00, 8em 17em #379717, 9em 17em #379717, 7em 18em #379717,
+      8em 18em #379717, 9em 18em #207e01, 8em 19em #379717, 9em 19em #379717,
+      11em 19em #207e01, 12em 19em #207e01, 13em 19em #379717, 11em 20em #207e01,
+      17em 30em #de0000;
+  }
+
+  30%,
+  100% {
+    box-shadow: 7em 26em #fff, 8em 26em #000, 7em 27em #000, 8em 27em #000,
+      7em 28em #000, 8em 28em #000, 12em 26em #fff, 13em 26em #000,
+      12em 27em #000, 13em 27em #000, 12em 28em #000, 13em 28em #000,
+      10em 30em #000, 10em 21em #207e01, 10em 20em #207e01, 10em 19em #207e01,
+      10em 18em #207e01, 10em 17em #207e01, 10em 16em #379717, 10em 15em #379717,
+      10em 14em #2fbd00, 10em 13em #2fbd00, 5em 17em #2fbd00, 6em 17em #2fbd00,
+      7em 17em #2fbd00, 8em 17em #379717, 9em 17em #379717, 7em 18em #379717,
+      8em 18em #379717, 9em 18em #207e01, 8em 19em #379717, 9em 19em #379717,
+      11em 19em #207e01, 12em 19em #207e01, 13em 19em #379717, 11em 20em #207e01,
+      17em 30em #de0000, 18em 29em #fe622c;
   }
 }
