@@ -1,12 +1,85 @@
-.pot {
+@font-face {
+  font-family: "NeoDunggeunmoPro-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pot,
+.wrap {
   font-size: 12px; /* 크키 조절 */
-  background-color: #efefef;
   width: 25em;
   height: 33em;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* 화면 정중앙 위치 */
+}
+
+.calendar {
+  /* background-color: ; */
+  width: 50%;
+  height: 50%;
+  float: right;
+  position: relative;
+}
+
+p {
+  font-family: "NeoDunggeunmoPro-Regular";
+  margin: 0;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 25%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p:not(:nth-child(1)) {
+  margin: 6px 3px 3px 0;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+p:nth-child(1) {
+  border-top: 6px solid #ca1e1c;
+  border-bottom: 4px double black;
+  border-right: 4px double black;
+  border-left: 1px solid black;
+}
+
+p:nth-child(6) {
+  animation: skip 1.2s ease-out 2.1s forwards;
+}
+p:nth-child(5) {
+  animation: skip 1.2s ease-out 5.5s forwards;
+}
+p:nth-child(4) {
+  animation: skip 1.2s ease-out 9s forwards;
+}
+p:nth-child(3) {
+  animation: skip 1.2s ease-out 12s forwards;
+}
+p:nth-child(2) {
+  animation: skip 1.2s ease-out 14.5s forwards;
+}
+
+@keyframes skip {
+  0% {
+    transform: skew(-20deg);
+    right: 6%;
+  }
+
+  100% {
+    transform: skew(-20deg);
+    right: 6%;
+    opacity: 0;
+  }
 }
 
 /* 접근성 고려 */
@@ -67,10 +140,9 @@
 }
 
 .pot::after {
-  animation: day1 3s steps(1) 2 forwards, day2 3s 6.1s steps(1) forwards,
-    day3 3s 9.5s steps(1) forwards, day4 3s 13s steps(1) forwards,
-    day5 3s 16s steps(1) forwards;
-  /* animation: day5 3s steps(1) forwards; */
+  animation: day1 1s steps(1) 2 forwards, day2 3s 2.1s steps(1) forwards,
+    day3 3s 5.5s steps(1) forwards, day4 3s 9s steps(1) forwards,
+    day5 3s 12s steps(1) forwards;
 }
 
 @keyframes day1 {
@@ -430,7 +502,7 @@
       11em 13em #207e01, 12em 13em #379717, 11em 14em #379717, 11em 6em #155700,
       12em 5em #155700, 13em 5em #ffc400, 12em 4em #ffc400, 13em 4em #ffc400,
       9em 4em #155700, 8em 4em #ffc400, 9em 14em #155700, 6em 14em #ff9900,
-      7em 14em #ffc400, 8em 14em #ff9900, 6em 13em #ffc400, 7em 13em #ff6600,
+      7em 14em #ffc400, 8em 14em #ff9900, 6em 13em #ffc400, 7em 13em #ff3300,
       8em 13em #ffc400, 6em 12em #ff9900, 7em 12em #ffc400, 8em 12em #ff9900,
       11em 17em #155700, 12em 17em #ffc400, 11em 16em #ffc400, 12em 16em #ffc400,
       11em 10em #155700, 12em 10em #ffc400;
@@ -455,10 +527,10 @@
       11em 13em #207e01, 12em 13em #379717, 11em 14em #379717, 11em 6em #155700,
       12em 5em #155700, 13em 5em #ffc400, 12em 4em #ffc400, 13em 4em #ffc400,
       9em 4em #155700, 8em 4em #ffc400, 9em 14em #155700, 6em 14em #ff9900,
-      7em 14em #ffc400, 8em 14em #ff9900, 6em 13em #ffc400, 7em 13em #ff6600,
+      7em 14em #ffc400, 8em 14em #ff9900, 6em 13em #ffc400, 7em 13em #ff3300,
       8em 13em #ffc400, 6em 12em #ff9900, 7em 12em #ffc400, 8em 12em #ff9900,
       11em 17em #155700, 12em 17em #ffc400, 11em 16em #ffc400, 12em 16em #ffc400,
-      11em 11em #155700, 11em 10em #ffc400, 12em 10em #ff6600, 13em 10em #ffc400,
+      11em 11em #155700, 11em 10em #ffc400, 12em 10em #ff3300, 13em 10em #ffc400,
       12em 9em #ffc400, 12em 11em #ffc400, 21em 29em #dd0612, 20em 28em #dd0612,
       21em 28em #dd0612, 22em 28em #dd0612;
   }
@@ -481,12 +553,12 @@
       11em 12em #379717, 12em 12em #379717, 13em 12em #379717, 14em 12em #2fbd00,
       11em 13em #207e01, 12em 13em #379717, 11em 14em #379717, 11em 6em #155700,
       12em 5em #155700, 13em 5em #ffc400, 12em 4em #ffc400, 13em 4em #ffc400,
-      7em 4em #ffc400, 8em 4em #ff6600, 9em 4em #ffc400, 8em 5em #ffc400,
+      7em 4em #ffc400, 8em 4em #ff3300, 9em 4em #ffc400, 8em 5em #ffc400,
       9em 5em #155700, 8em 3em #ffc400, 9em 14em #155700, 6em 14em #ff9900,
-      7em 14em #ffc400, 8em 14em #ff9900, 6em 13em #ffc400, 7em 13em #ff6600,
+      7em 14em #ffc400, 8em 14em #ff9900, 6em 13em #ffc400, 7em 13em #ff3300,
       8em 13em #ffc400, 6em 12em #ff9900, 7em 12em #ffc400, 8em 12em #ff9900,
       11em 17em #155700, 12em 17em #ffc400, 11em 16em #ffc400, 12em 16em #ffc400,
-      11em 11em #155700, 11em 10em #ffc400, 12em 10em #ff6600, 13em 10em #ffc400,
+      11em 11em #155700, 11em 10em #ffc400, 12em 10em #ff3300, 13em 10em #ffc400,
       12em 9em #ffc400, 12em 11em #ffc400, 21em 29em #dd0612, 20em 28em #dd0612,
       21em 28em #dd0612, 22em 28em #dd0612, 19em 27em #dd0612, 20em 27em #dd0612,
       21em 27em #dd0612, 22em 27em #dd0612, 23em 27em #dd0612;
@@ -510,14 +582,14 @@
       11em 12em #379717, 12em 12em #379717, 13em 12em #379717, 14em 12em #2fbd00,
       11em 13em #207e01, 12em 13em #379717, 11em 14em #379717, 11em 6em #155700,
       12em 5em #155700, 13em 5em #ffc400, 12em 4em #ffc400, 13em 4em #ffc400,
-      7em 4em #ffc400, 8em 4em #ff6600, 9em 4em #ffc400, 9em 5em #155700,
+      7em 4em #ffc400, 8em 4em #ff3300, 9em 4em #ffc400, 9em 5em #155700,
       8em 5em #ffc400, 8em 3em #ffc400, 9em 14em #155700, 6em 14em #ff9900,
-      7em 14em #ffc400, 8em 14em #ff9900, 6em 13em #ffc400, 7em 13em #ff6600,
+      7em 14em #ffc400, 8em 14em #ff9900, 6em 13em #ffc400, 7em 13em #ff3300,
       8em 13em #ffc400, 6em 12em #ff9900, 7em 12em #ffc400, 8em 12em #ff9900,
       11em 17em #155700, 12em 18em #ff9900, 13em 18em #ffc400, 14em 18em #ff9900,
-      12em 17em #ffc400, 13em 17em #ff6600, 14em 17em #ffc400, 12em 16em #ff9900,
+      12em 17em #ffc400, 13em 17em #ff3300, 14em 17em #ffc400, 12em 16em #ff9900,
       13em 16em #ffc400, 14em 16em #ff9900, 11em 11em #155700, 11em 10em #ffc400,
-      12em 10em #ff6600, 13em 10em #ffc400, 12em 9em #ffc400, 12em 11em #ffc400,
+      12em 10em #ff3300, 13em 10em #ffc400, 12em 9em #ffc400, 12em 11em #ffc400,
       21em 29em #dd0612, 20em 28em #dd0612, 21em 28em #dd0612, 22em 28em #dd0612,
       19em 27em #dd0612, 20em 27em #dd0612, 21em 27em #dd0612, 22em 27em #dd0612,
       23em 27em #dd0612, 19em 26em #dd0612, 20em 26em #dd0612, 21em 26em #dd0612,
@@ -542,15 +614,15 @@
       11em 20em #207e01, 8em 19em #379717, 11em 12em #379717, 12em 12em #379717,
       13em 12em #379717, 14em 12em #2fbd00, 11em 13em #207e01, 12em 13em #379717,
       11em 14em #379717, 11em 6em #155700, 12em 6em #ff9900, 13em 6em #ffc400,
-      14em 6em #ff9900, 12em 5em #ffc400, 13em 5em #ff6600, 14em 5em #ffc400,
+      14em 6em #ff9900, 12em 5em #ffc400, 13em 5em #ff3300, 14em 5em #ffc400,
       12em 4em #ff9900, 13em 4em #ffc400, 14em 4em #ff9900, 7em 4em #ffc400,
-      8em 4em #ff6600, 9em 4em #ffc400, 9em 5em #155700, 8em 5em #ffc400,
+      8em 4em #ff3300, 9em 4em #ffc400, 9em 5em #155700, 8em 5em #ffc400,
       8em 3em #ffc400, 9em 14em #155700, 6em 14em #ff9900, 7em 14em #ffc400,
-      8em 14em #ff9900, 6em 13em #ffc400, 7em 13em #ff6600, 8em 13em #ffc400,
+      8em 14em #ff9900, 6em 13em #ffc400, 7em 13em #ff3300, 8em 13em #ffc400,
       6em 12em #ff9900, 7em 12em #ffc400, 8em 12em #ff9900, 11em 17em #155700,
       12em 18em #ff9900, 13em 18em #ffc400, 14em 18em #ff9900, 12em 17em #ffc400,
-      13em 17em #ff6600, 14em 17em #ffc400, 12em 16em #ff9900, 13em 16em #ffc400,
-      14em 16em #ff9900, 11em 11em #155700, 11em 10em #ffc400, 12em 10em #ff6600,
+      13em 17em #ff3300, 14em 17em #ffc400, 12em 16em #ff9900, 13em 16em #ffc400,
+      14em 16em #ff9900, 11em 11em #155700, 11em 10em #ffc400, 12em 10em #ff3300,
       13em 10em #ffc400, 12em 9em #ffc400, 12em 11em #ffc400, 21em 29em #dd0612,
       20em 28em #dd0612, 21em 28em #dd0612, 22em 28em #dd0612, 19em 27em #dd0612,
       20em 27em #dd0612, 21em 27em #dd0612, 22em 27em #dd0612, 23em 27em #dd0612,
