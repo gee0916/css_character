@@ -7,9 +7,9 @@
 }
 
 @font-face {
-  font-family: "InkLipquid";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff")
-    format("woff");
+  font-family: "MYYeongnamnu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -20,7 +20,7 @@ p {
 }
 
 body {
-  background-color: beige;
+  background-color: #e9edc9;
 }
 
 :root {
@@ -58,7 +58,7 @@ body {
 
 /* 폴라로이드 */
 .polaroid,
-.wrap,
+.calendar-wrap,
 .pot {
   font-size: 12px;
   width: 25em;
@@ -79,22 +79,28 @@ body {
   justify-content: center;
 }
 
-.wrap,
+.calendar-wrap,
 .pot {
   padding: 2px;
 }
 
+.calendar-wrap {
+  background: linear-gradient(to bottom, #2bc0e4, #eaecc6);
+}
+
 .text-wrap {
   position: absolute;
-  bottom: 2%;
-  font-family: "InkLipquid";
-  font-size: 30px;
+  bottom: 3%;
+  font-family: "MYYeongnamnu";
+  font-size: 3em;
   margin: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   opacity: 0;
-  animation: text 1.2s ease-out 15s forwards;
+  animation: text 1.2s ease-out 15.5s forwards;
+  width: 50em;
+  transform: skewY(176deg);
 }
 
 @keyframes text {
@@ -119,7 +125,7 @@ body {
   right: 0;
   width: 50%;
   height: 25%;
-  font-size: 30px;
+  font-size: 2.5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,7 +158,7 @@ body {
   animation: skip 1.2s ease-out 12.5s forwards;
 }
 .calendar p:nth-child(2) {
-  animation: skip 1.2s ease-out 15s forwards;
+  animation: skip 1.2s ease-out 15.5s forwards;
 }
 
 @keyframes skip {
@@ -906,15 +912,12 @@ body {
   }
 
   100% {
-    box-shadow: 6em 26em var(--etc-black), 9em 26em var(--etc-black),
-      6em 27em var(--etc-black), 9em 27em var(--etc-black),
-      7em 25em var(--etc-black), 8em 25em var(--etc-black),
-      11em 26em var(--etc-black), 14em 26em var(--etc-black),
-      11em 27em var(--etc-black), 14em 27em var(--etc-black),
-      12em 25em var(--etc-black), 13em 25em var(--etc-black),
-      9em 29em var(--etc-white), 10em 29em var(--etc-white),
-      11em 29em var(--etc-white), 9em 30em var(--etc-red),
-      10em 30em var(--etc-red), 11em 30em var(--etc-red),
+    box-shadow: 7em 26em var(--etc-white), 8em 26em var(--etc-black),
+      7em 27em var(--etc-black), 8em 27em var(--etc-black),
+      7em 28em var(--etc-black), 8em 28em var(--etc-black),
+      12em 26em var(--etc-white), 13em 26em var(--etc-black),
+      12em 27em var(--etc-black), 13em 27em var(--etc-black),
+      12em 28em var(--etc-black), 13em 28em var(--etc-black),
       6em 29em var(--etc-point), 7em 29em var(--etc-point),
       13em 29em var(--etc-point), 14em 29em var(--etc-point),
       10em 21em var(--grass3), 10em 20em var(--grass3), 10em 19em var(--grass3),
