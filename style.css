@@ -60,7 +60,7 @@ body {
 .polaroid,
 .wrap,
 .pot {
-  font-size: 12px; /* 크키 조절 */
+  font-size: 12px;
   width: 25em;
   height: 31em;
   position: absolute;
@@ -72,7 +72,7 @@ body {
   padding: 20px 20px 120px 20px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* 화면 정중앙 위치 */
+  transform: translate(-50%, -50%);
   border-radius: 6px;
   box-shadow: 0 10px 10px -5px;
   display: flex;
