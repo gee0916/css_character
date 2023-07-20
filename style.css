@@ -88,6 +88,7 @@ body {
   background: linear-gradient(to bottom, #0066ff, #eaecc6);
 }
 
+/* 하단 문구 */
 .text-wrap {
   position: absolute;
   bottom: 3%;
