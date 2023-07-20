@@ -85,7 +85,7 @@ body {
 }
 
 .calendar-wrap {
-  background: linear-gradient(to bottom, #2bc0e4, #eaecc6);
+  background: linear-gradient(to bottom, #0066ff, #eaecc6);
 }
 
 .text-wrap {
@@ -98,9 +98,17 @@ body {
   align-items: center;
   flex-direction: column;
   opacity: 0;
-  animation: text 1.2s ease-out 15.5s forwards;
+  animation: text 1.2s ease-out 11s forwards;
   width: 50em;
   transform: skewY(176deg);
+}
+
+.text-wrap p:nth-child(1) {
+  transform: translateX(-71px);
+}
+
+.text-wrap p:nth-child(2) {
+  transform: translateX(38px);
 }
 
 @keyframes text {
@@ -115,6 +123,8 @@ body {
   height: 50%;
   float: right;
   position: relative;
+  top: 3%;
+  right: 3%;
 }
 
 .calendar p {
@@ -146,19 +156,19 @@ body {
 }
 
 .calendar p:nth-child(6) {
-  animation: skip 1.2s ease-out 2.1s forwards;
+  animation: skip 1.2s ease-out 3.1s forwards;
 }
 .calendar p:nth-child(5) {
   animation: skip 1.2s ease-out 5.5s forwards;
 }
 .calendar p:nth-child(4) {
-  animation: skip 1.2s ease-out 9s forwards;
+  animation: skip 1.2s ease-out 7.5s forwards;
 }
 .calendar p:nth-child(3) {
-  animation: skip 1.2s ease-out 12.5s forwards;
+  animation: skip 1.2s ease-out 9.5s forwards;
 }
 .calendar p:nth-child(2) {
-  animation: skip 1.2s ease-out 15.5s forwards;
+  animation: skip 1.2s ease-out 11s forwards;
 }
 
 @keyframes skip {
@@ -231,9 +241,9 @@ body {
 }
 
 .pot::after {
-  animation: day1 1s steps(1) 2 forwards, day2 3s 2.1s steps(1) forwards,
-    day3 3s 5.5s steps(1) forwards, day4 3s 9s steps(1) forwards,
-    day5 3s 12.5s steps(1) forwards;
+  animation: day1 2s steps(1) 2 forwards, day2 2s 3.1s steps(1) forwards,
+    day3 2s 5.5s steps(1) forwards, day4 1.5s 7.5s steps(1) forwards,
+    day5 1.5s 9.5s steps(1) forwards;
 }
 
 @keyframes day1 {
@@ -912,38 +922,40 @@ body {
   }
 
   100% {
-    box-shadow: 7em 26em var(--etc-white), 8em 26em var(--etc-black),
-      7em 27em var(--etc-black), 8em 27em var(--etc-black),
-      7em 28em var(--etc-black), 8em 28em var(--etc-black),
-      12em 26em var(--etc-white), 13em 26em var(--etc-black),
-      12em 27em var(--etc-black), 13em 27em var(--etc-black),
-      12em 28em var(--etc-black), 13em 28em var(--etc-black),
-      6em 29em var(--etc-point), 7em 29em var(--etc-point),
-      13em 29em var(--etc-point), 14em 29em var(--etc-point),
-      10em 21em var(--grass3), 10em 20em var(--grass3), 10em 19em var(--grass3),
-      10em 18em var(--grass3), 10em 17em var(--grass3), 10em 16em var(--grass3),
-      10em 15em var(--grass3), 10em 14em var(--grass3), 10em 13em var(--grass3),
-      10em 12em var(--grass3), 10em 11em var(--grass3), 10em 10em var(--grass3),
-      10em 9em var(--grass3), 10em 8em var(--grass3), 10em 7em var(--grass3),
-      10em 6em var(--grass3), 10em 5em var(--grass2), 5em 17em var(--grass1),
-      6em 17em var(--grass1), 7em 17em var(--grass1), 8em 17em var(--grass2),
-      9em 17em var(--grass2), 7em 18em var(--grass2), 8em 18em var(--grass2),
-      9em 18em var(--grass3), 8em 19em var(--grass2), 9em 19em var(--grass2),
-      11em 19em var(--grass3), 8em 9em var(--grass3), 9em 9em var(--grass3),
-      7em 8em var(--grass1), 8em 8em var(--grass1), 9em 8em var(--grass2),
-      12em 19em var(--grass3), 13em 19em var(--grass2), 11em 20em var(--grass3),
-      8em 19em var(--grass2), 11em 12em var(--grass2), 12em 12em var(--grass2),
-      13em 12em var(--grass2), 14em 12em var(--grass1), 11em 13em var(--grass3),
-      12em 13em var(--grass2), 11em 14em var(--grass2), 11em 6em var(--grass4),
-      12em 6em var(--flower2), 13em 6em var(--flower1), 14em 6em var(--flower2),
-      12em 5em var(--flower1), 13em 5em var(--flower3), 14em 5em var(--flower1),
-      12em 4em var(--flower2), 13em 4em var(--flower1), 14em 4em var(--flower2),
-      7em 4em var(--flower1), 8em 4em var(--flower3), 9em 4em var(--flower1),
-      9em 5em var(--grass4), 8em 5em var(--flower1), 8em 3em var(--flower1),
-      9em 14em var(--grass4), 6em 14em var(--flower2), 7em 14em var(--flower1),
-      8em 14em var(--flower2), 6em 13em var(--flower1), 7em 13em var(--flower3),
-      8em 13em var(--flower1), 6em 12em var(--flower2), 7em 12em var(--flower1),
-      8em 12em var(--flower2), 11em 17em var(--grass4), 12em 18em var(--flower2),
+    box-shadow: 6em 26em var(--etc-black), 9em 26em var(--etc-black),
+      6em 27em var(--etc-black), 9em 27em var(--etc-black),
+      7em 25em var(--etc-black), 8em 25em var(--etc-black),
+      11em 26em var(--etc-black), 14em 26em var(--etc-black),
+      11em 27em var(--etc-black), 14em 27em var(--etc-black),
+      12em 25em var(--etc-black), 13em 25em var(--etc-black),
+      9em 30em var(--etc-black), 10em 30em var(--etc-black),
+      11em 30em var(--etc-black), 6em 29em var(--etc-point),
+      7em 29em var(--etc-point), 13em 29em var(--etc-point),
+      14em 29em var(--etc-point), 10em 21em var(--grass3),
+      10em 20em var(--grass3), 10em 19em var(--grass3), 10em 18em var(--grass3),
+      10em 17em var(--grass3), 10em 16em var(--grass3), 10em 15em var(--grass3),
+      10em 14em var(--grass3), 10em 13em var(--grass3), 10em 12em var(--grass3),
+      10em 11em var(--grass3), 10em 10em var(--grass3), 10em 9em var(--grass3),
+      10em 8em var(--grass3), 10em 7em var(--grass3), 10em 6em var(--grass3),
+      10em 5em var(--grass2), 5em 17em var(--grass1), 6em 17em var(--grass1),
+      7em 17em var(--grass1), 8em 17em var(--grass2), 9em 17em var(--grass2),
+      7em 18em var(--grass2), 8em 18em var(--grass2), 9em 18em var(--grass3),
+      8em 19em var(--grass2), 9em 19em var(--grass2), 11em 19em var(--grass3),
+      8em 9em var(--grass3), 9em 9em var(--grass3), 7em 8em var(--grass1),
+      8em 8em var(--grass1), 9em 8em var(--grass2), 12em 19em var(--grass3),
+      13em 19em var(--grass2), 11em 20em var(--grass3), 8em 19em var(--grass2),
+      11em 12em var(--grass2), 12em 12em var(--grass2), 13em 12em var(--grass2),
+      14em 12em var(--grass1), 11em 13em var(--grass3), 12em 13em var(--grass2),
+      11em 14em var(--grass2), 11em 6em var(--grass4), 12em 6em var(--flower2),
+      13em 6em var(--flower1), 14em 6em var(--flower2), 12em 5em var(--flower1),
+      13em 5em var(--flower3), 14em 5em var(--flower1), 12em 4em var(--flower2),
+      13em 4em var(--flower1), 14em 4em var(--flower2), 7em 4em var(--flower1),
+      8em 4em var(--flower3), 9em 4em var(--flower1), 9em 5em var(--grass4),
+      8em 5em var(--flower1), 8em 3em var(--flower1), 9em 14em var(--grass4),
+      6em 14em var(--flower2), 7em 14em var(--flower1), 8em 14em var(--flower2),
+      6em 13em var(--flower1), 7em 13em var(--flower3), 8em 13em var(--flower1),
+      6em 12em var(--flower2), 7em 12em var(--flower1), 8em 12em var(--flower2),
+      11em 17em var(--grass4), 12em 18em var(--flower2),
       13em 18em var(--flower1), 14em 18em var(--flower2),
       12em 17em var(--flower1), 13em 17em var(--flower3),
       14em 17em var(--flower1), 12em 16em var(--flower2),
