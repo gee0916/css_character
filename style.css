@@ -6,6 +6,23 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "InkLipquid";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  font-size: inherit;
+  margin: 0;
+}
+
+body {
+  background-color: beige;
+}
+
 :root {
   /* etc */
   --etc-black: #000;
@@ -39,26 +56,52 @@
   --main-font: "NeoDunggeunmoPro-Regular";
 }
 
-.pot,
-.wrap {
+/* 폴라로이드 */
+.polaroid,
+.wrap,
+.pot {
   font-size: 12px; /* 크키 조절 */
   width: 25em;
   height: 31em;
   position: absolute;
+  border: 1px solid var(--etc-black);
+}
+
+.polaroid {
+  background: white;
+  padding: 20px 20px 120px 20px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* 화면 정중앙 위치 */
+  border-radius: 6px;
+  box-shadow: 0 10px 10px -5px;
+  display: flex;
+  justify-content: center;
 }
 
-h1 {
+.wrap,
+.pot {
+  padding: 2px;
+}
+
+.text-wrap {
   position: absolute;
-  font-size: 15px;
-  font-family: var(--main-font);
+  bottom: 2%;
+  font-family: "InkLipquid";
+  font-size: 30px;
   margin: 0;
-  left: 10%;
-  box-shadow: inset 0 -0.5em 0 rgba(255, 79, 110, 0.2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  animation: text 1.2s ease-out 15s forwards;
 }
 
+@keyframes text {
+  100% {
+    opacity: 1;
+  }
+}
 /* 달력 */
 .calendar {
   /* background-color: ; */
