@@ -65,7 +65,7 @@ body {
 .calendar-wrap,
 .pot {
   font-size: var(--main-size);
-  width: 25em;
+  width: 26em;
   height: 31em;
   position: absolute;
   border: 1px solid var(--etc-black);
