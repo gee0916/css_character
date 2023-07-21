@@ -21,6 +21,7 @@ p {
 
 body {
   background-color: #e9edc9;
+  overflow-x: hidden;
 }
 
 :root {
@@ -63,7 +64,8 @@ body {
 /* 폴라로이드 */
 .polaroid,
 .calendar-wrap,
-.pot {
+.pot,
+.cloud-wrap-box {
   font-size: var(--main-size);
   width: 26em;
   height: 31em;
@@ -84,6 +86,7 @@ body {
 }
 
 .calendar-wrap,
+.cloud-wrap-box,
 .pot {
   padding: 2px;
 }
@@ -92,35 +95,6 @@ body {
   background: linear-gradient(to bottom, #0066ff, #eaecc6);
 }
 
-/* 하단 문구 */
-.text-wrap {
-  position: absolute;
-  bottom: 3%;
-  font-family: var(--font2);
-  font-size: 3em;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  opacity: 0;
-  animation: text 1.2s ease-out 11s forwards;
-  width: 50em;
-  transform: skewY(176deg);
-}
-
-.text-wrap p:nth-child(1) {
-  transform: translateX(-71px);
-}
-
-.text-wrap p:nth-child(2) {
-  transform: translateX(38px);
-}
-
-@keyframes text {
-  100% {
-    opacity: 1;
-  }
-}
 /* 달력 */
 .calendar {
   /* background-color: ; */
@@ -144,6 +118,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 }
 
 .calendar p:not(:nth-child(1)) {
@@ -186,6 +161,101 @@ body {
     transform: skew(-20deg);
     right: 6%;
     opacity: 0;
+  }
+}
+
+/* 구름 */
+.cloud-wrap-box {
+  overflow: hidden;
+}
+
+.cloud-wrap {
+  width: 80em;
+  height: 26em;
+  transform: translate(-80em, 2em);
+  position: absolute;
+  animation: sky 6s linear(0 0%, 1 100%) 11s infinite;
+}
+
+.cloud-wrap2 {
+  animation: sky 6s cubic-bezier(0.4, 0, 1, 1) 13.5s infinite;
+}
+
+.cloud {
+  display: flex;
+}
+
+.cloud div {
+  width: 6em;
+  height: 6em;
+  border-radius: 100%;
+  position: absolute;
+  box-shadow: 135px 5px 20px var(--etc-white);
+}
+
+.cloud-top div:nth-child(2) {
+  transform: translateX(4em);
+}
+
+.cloud-top div:nth-child(3) {
+  transform: translateX(8em);
+}
+
+.cloud2 div {
+  box-shadow: 500px 5px 40px var(--etc-white);
+}
+
+.cloud-bottom div:nth-child(2) {
+  transform: translate(4em, 12em);
+}
+
+.cloud-bottom div:nth-child(3) {
+  transform: translate(8em, 12em);
+}
+
+.cloud3 div {
+  transform: translateY(12em);
+  box-shadow: 300px 5px 40px var(--etc-white);
+}
+
+.cloud4 div {
+  transform: translateY(12em);
+  box-shadow: 650px 5px 20px var(--etc-white);
+}
+
+@keyframes sky {
+  to {
+    transform: translateX(43em);
+  }
+}
+
+/* 하단 문구 */
+.text-wrap {
+  position: absolute;
+  bottom: 3%;
+  font-family: var(--font2);
+  font-size: 3em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  animation: text 1.2s ease-out 11s forwards;
+  width: 50em;
+  transform: skewY(176deg);
+}
+
+.text-wrap p:nth-child(1) {
+  transform: translateX(-71px);
+}
+
+.text-wrap p:nth-child(2) {
+  transform: translateX(38px);
+}
+
+@keyframes text {
+  100% {
+    opacity: 1;
   }
 }
 
