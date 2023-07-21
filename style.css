@@ -53,14 +53,18 @@ body {
   --flower3: #ff3300;
 
   /* font */
-  --main-font: "NeoDunggeunmoPro-Regular";
+  --font1: "NeoDunggeunmoPro-Regular";
+  --font2: "MYYeongnamnu";
+
+  /* size */
+  --main-size: 12px;
 }
 
 /* 폴라로이드 */
 .polaroid,
 .calendar-wrap,
 .pot {
-  font-size: 12px;
+  font-size: var(--main-size);
   width: 25em;
   height: 31em;
   position: absolute;
@@ -92,7 +96,7 @@ body {
 .text-wrap {
   position: absolute;
   bottom: 3%;
-  font-family: "MYYeongnamnu";
+  font-family: var(--font2);
   font-size: 3em;
   margin: 0;
   display: flex;
@@ -129,7 +133,7 @@ body {
 }
 
 .calendar p {
-  font-family: var(--main-font);
+  font-family: var(--font1);
   margin: 0;
   background-color: var(--etc-white);
   position: absolute;
